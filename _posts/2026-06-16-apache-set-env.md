@@ -35,11 +35,11 @@ httpd -k install 로 서비스 성공적으로 등록된 모습
 
 ### 아파치 실행
 
-window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -start
+window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -k start
 
 ### 아파치 종료
 
-window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -stop
+window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -k stop
 
 ### 아파치 실행 상태 확인
 
