@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2026-08-07T19:15:50+09:00</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2026-08-07T19:20:40+09:00</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
 
 <p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
 
@@ -134,7 +134,19 @@ images 폴더가 생서되고 image.png가 생성된다.</p>
  │
  └jpg 폴더
         └(현재의마크다운의 이름을 가진 jpg 이미지).jpg
-</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry><entry><title type="html">2026-08-07 사이트-올리기전-미리보기</title><link href="http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 사이트-올리기전-미리보기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html"><![CDATA[<h1 id="사이트-올리기전-미리보기">사이트-올리기전-미리보기</h1>
+
+<h2 id="문제">문제</h2>
+<p>vscode로 미리 볼 수 있는 것에 한계가 있다 생각이 들었다.
+결국 브라우저로 보고 싶어서 정리해 보았다.</p>
+
+<h3 id="jektll-서버-작동">jektll 서버 작동</h3>
+<pre><code class="language-cmd">bundle exec jekyll serve
+</code></pre>
+
+<h3 id="브라우저에서-보기">브라우저에서 보기</h3>
+<pre><code class="language-url">http://localhost:4000/
+</code></pre>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[사이트-올리기전-미리보기]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
 
 <h2 id="직접-사이트로-올리는-main과-작업하는-공간-분리">직접 사이트로 올리는 main과 작업하는 공간 분리</h2>
 <ul>
@@ -412,57 +424,4 @@ VirtualHost: 가상 호스트를 정의하고 해당 호스트에 대한 설정�
 <h3 id="참고-출처">참고 출처</h3>
 
 <p>출처 : https://blog.naver.com/cjs0308cjs/223370079814<br />
-출처 : https://ecolumbus.tistory.com/147</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry><entry><title type="html">Hellow to myblog</title><link href="http://localhost:4000/myblog/2026/06/08/Hellow-to-myblog.html" rel="alternate" type="text/html" title="Hellow to myblog" /><published>2026-06-08T00:00:00+09:00</published><updated>2026-06-08T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/08/Hellow-to-myblog</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/08/Hellow-to-myblog.html"><![CDATA[<p>이미지 넣기 : 
-<img src="/myblog/assets/images/sicho.png" alt="My helpful screenshot" /></p>
-
-<p>파일 추가 : 
-… you can <a href="/myblog/assets/file/mydoc.pdf">get the PDF</a> directly.</p>
-
-<p>url 추가 :</p>
-<ul>
-  
-    <li>
-      <a href="/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html">2026-08-07 이미지 추가 시 경로 자동화</a>
-    </li>
-  
-    <li>
-      <a href="/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html">2026-08-07 git_병합하기</a>
-    </li>
-  
-    <li>
-      <a href="/blog/2026/08/07/FreeNote.html">2026-08-07 FreeNote</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/18/php.html">PHP</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/18/mysql.html">Mysql</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/18/check-list.html">Check List</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/17/blog.html">Blog</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/16/apache.html">아파치 서버 작동까지</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/16/apache-set-env.html">아파치 환경 변수 설정</a>
-    </li>
-  
-    <li>
-      <a href="/2026/06/08/Hellow-to-myblog.html">Hellow to myblog</a>
-    </li>
-  
-    <li>
-      <a href="/jekyll/update/2026/06/07/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-    </li>
-  
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[이미지 넣기 :]]></summary></entry></feed>
+출처 : https://ecolumbus.tistory.com/147</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry></feed>
