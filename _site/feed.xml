@@ -1,10 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2026-08-07T19:20:40+09:00</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2026-08-13T02:42:45+09:00</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-13 [APM구현]APM-github에-저장하기</title><link href="http://localhost:4000/myblog/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-13 [APM구현]APM-github에-저장하기" /><published>2026-08-13T00:00:00+09:00</published><updated>2026-08-13T00:00:00+09:00</updated><id>http://localhost:4000/myblog/webdev/2026/08/13/%5BAPM%EA%B5%AC%ED%98%84%5DAPM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="apm구현apm-github에-저장하기">[APM구현]APM-github에-저장하기</h1>
+
+<h3 id="github에-연결될-파일-구분">github에 연결될 파일 구분</h3>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>─┬apach
+ ├PHP
+ ├mysql
+ └htdocs * git에 연결될 파일
+</code></pre></div></div>
+<h3 id="apach경로-재설정">apach경로 재설정</h3>
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DocumentRoot</span> <span class="s2">"(htdocs 해당 파일의 부모 절대경로)\htdocs"</span>
+</code></pre></div></div>
+<p>htdocs 해당 파일의 절대 경로를 설정해 줘야한다.
+*주의 DocumentRoot는 절대 경로만 사용할 수 있다.</p>
+
+<h3 id="마무리">마무리</h3>
+<p>브라우저에 보이는 파일(htdocs)들은 다른 컴퓨터로 가져와 바로 사용할 수 있지만 apach의 설정들은 각 컴퓨터마다 설정해야 사용할 수 있다는 걸 깨달았다.</p>]]></content><author><name></name></author><category term="WebDev" /><category term="Apach" /><category term="php" /><category term="mySQL" /><category term="github" /><summary type="html"><![CDATA[[APM구현]APM-github에-저장하기 github에 연결될 파일 구분 ─┬apach ├PHP ├mysql └htdocs * git에 연결될 파일 apach경로 재설정 DocumentRoot "(htdocs 해당 파일의 부모 절대경로)\htdocs" htdocs 해당 파일의 절대 경로를 설정해 줘야한다. *주의 DocumentRoot는 절대 경로만 사용할 수 있다.]]></summary></entry><entry><title type="html">2026-08-11 Blog시작을-위한-설정</title><link href="http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html" rel="alternate" type="text/html" title="2026-08-11 Blog시작을-위한-설정" /><published>2026-08-11T00:00:00+09:00</published><updated>2026-08-11T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html"><![CDATA[<h1 id="blog시작을-위한-설정">Blog시작을-위한-설정</h1>
+
+<h2 id="문제--블로그-경로가-복잡하여-작성시-찾는-불편함">문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함</h2>
+<ul>
+  <li>블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기</li>
+</ul>
+
+<h3 id="간단한-해결-방법">간단한 해결 방법</h3>
+<ol>
+  <li>바탕화면에 경로의 바로가기를 만든다.(프론트 매터 작성x)</li>
+</ol>
+
+<h3 id="자동으로-블로그-셋팅해주기">자동으로 블로그 셋팅해주기</h3>
+<ul>
+  <li>window명령어 프롬프트를 이용한 배치스크립트 활용(.bat)
+    <ol>
+      <li>텍스트 파일(.txt)로 명령어 프롬프트를 작성한다.</li>
+      <li>확장자 명을 .bat로 바꿔준다.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>bat?
+윈도우 배치 스크립트
+셀 스크립트 언어</p>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo <span class="na">off</span>
+<span class="nb">chcp</span> <span class="m">65001</span> <span class="o">&gt;</span> <span class="kr">nul</span>
+
+<span class="c">:: 1. 오늘 날짜를 YYYY-MM-DD 형식으로 추출</span>
+<span class="kd">set</span> <span class="kd">YYYY</span><span class="o">=</span><span class="vm">%date</span>:<span class="o">~</span><span class="m">0</span><span class="o">,</span><span class="m">4</span><span class="err">%</span>
+<span class="kd">set</span> <span class="kd">MM</span><span class="o">=</span><span class="vm">%date</span>:<span class="o">~</span><span class="m">5</span><span class="o">,</span><span class="m">2</span><span class="err">%</span>
+<span class="kd">set</span> <span class="kd">DD</span><span class="o">=</span><span class="vm">%date</span>:<span class="o">~</span><span class="m">8</span><span class="o">,</span><span class="m">2</span><span class="err">%</span>
+<span class="kd">set</span> <span class="kd">TODAY</span><span class="o">=</span><span class="nv">%YYYY%</span><span class="o">-</span><span class="nv">%MM%</span><span class="o">-</span><span class="nv">%DD%</span>
+
+<span class="c">:: 2. 카테고리 선택 (Security, WebDev, AI, GameDev)</span>
+<span class="nb">echo</span>.
+<span class="nb">echo</span> <span class="o">=========================================</span>
+<span class="nb">echo</span>  📁 카테고리를 선택하세요
+<span class="nb">echo</span> <span class="o">=========================================</span>
+<span class="nb">echo</span>  <span class="m">1</span>. 직접 입력
+<span class="nb">echo</span>  <span class="m">2</span>. <span class="kd">Security</span> <span class="o">(</span>보안<span class="o">)</span>
+<span class="nb">echo</span>  <span class="m">3</span>. <span class="kd">Blog</span> <span class="o">(</span>블로그<span class="o">)</span>
+<span class="nb">echo</span> <span class="o">=========================================</span>
+<span class="kd">set</span> <span class="na">/p </span><span class="kd">CAT_CHOICE</span><span class="o">=</span><span class="s2">"번호를 입력하세요 (기본값 1): "</span>
+
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%CAT_CHOICE%</span><span class="s2">"</span><span class="o">==</span><span class="s2">"1"</span> <span class="kd">set</span> <span class="na">/p </span><span class="kd">CATEGORY</span><span class="o">=</span><span class="s2">"카테고리명을 직접 입력하세요: "</span>
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%CAT_CHOICE%</span><span class="s2">"</span><span class="o">==</span><span class="s2">"2"</span> <span class="kd">set</span> <span class="kd">CATEGORY</span><span class="o">=</span><span class="kd">Security</span>
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%CAT_CHOICE%</span><span class="s2">"</span><span class="o">==</span><span class="s2">"3"</span> <span class="kd">set</span> <span class="kd">CATEGORY</span><span class="o">=</span><span class="kd">Blog</span>
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%CAT_CHOICE%</span><span class="s2">"</span><span class="o">==</span><span class="s2">""</span> <span class="kd">set</span> <span class="na">/p </span><span class="kd">CATEGORY</span><span class="o">=</span><span class="s2">"카테고리명을 직접 입력하세요: "</span>
+
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%CATEGORY%</span><span class="s2">"</span><span class="o">==</span><span class="s2">""</span> <span class="kd">set</span> <span class="kd">CATEGORY</span><span class="o">=</span><span class="kd">Security</span>
+
+<span class="c">:: 3. 태그 입력 (여러 개 지원)</span>
+<span class="nb">echo</span>.
+<span class="nb">echo</span> <span class="o">=========================================</span>
+<span class="nb">echo</span>  🏷️ 태그를 입력하세요 <span class="o">(</span>쉼표로 구분하여 여러 개 가능<span class="o">)</span>
+<span class="nb">echo</span>  예: <span class="kd">TIL</span><span class="o">,</span> <span class="kd">Troubleshooting</span><span class="o">,</span> <span class="kd">Blog</span>
+<span class="nb">echo</span> <span class="o">=========================================</span>
+<span class="kd">set</span> <span class="na">/p </span><span class="kd">TAG_NAME</span><span class="o">=</span><span class="s2">"태그 입력 (엔터만 누르면 'TIL'): "</span>
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%TAG_NAME%</span><span class="s2">"</span><span class="o">==</span><span class="s2">""</span> <span class="kd">set</span> <span class="kd">TAG_NAME</span><span class="o">=</span><span class="kd">TIL</span>
+
+<span class="c">:: 4. 포스팅 파일명 및 주제 입력</span>
+<span class="nb">echo</span>.
+<span class="kd">set</span> <span class="na">/p </span><span class="kd">POST_NAME</span><span class="o">=</span><span class="s2">"포스팅 주제/제목을 입력하세요 (엔터만 누르면 'note'): "</span>
+<span class="k">if</span> <span class="s2">"</span><span class="nv">%POST_NAME%</span><span class="s2">"</span><span class="o">==</span><span class="s2">""</span> <span class="kd">set</span> <span class="kd">POST_NAME</span><span class="o">=</span><span class="kd">note</span>
+
+<span class="c">:: 5. 블로그 포스팅 폴더 경로 및 파일 경로 설정</span>
+<span class="kd">set</span> <span class="kd">BLOG_DIR</span><span class="o">=(**</span>블로그 경로<span class="o">**)</span>\_posts
+
+<span class="c">:: 공백(띄어쓰기)을 하이픈(-)으로 치환하는 핵심 구문</span>
+<span class="kd">set</span> <span class="kd">BLOG_DIR</span><span class="o">=</span><span class="vm">%BLOG</span>_DIR: <span class="o">=-</span><span class="err">%</span>
+<span class="kd">set</span> <span class="kd">TODAY</span><span class="o">=</span><span class="vm">%TODAY</span>: <span class="o">=-</span><span class="err">%</span>
+<span class="kd">set</span> <span class="kd">POST_NAME</span><span class="o">=</span><span class="vm">%POST</span>_NAME: <span class="o">=-</span><span class="err">%</span>
+
+<span class="kd">set</span> <span class="kd">FILE_PATH</span><span class="o">=</span><span class="nv">%BLOG_DIR%</span>\<span class="nv">%TODAY%</span><span class="o">-</span><span class="nv">%POST_NAME%</span>.md
+
+<span class="c">:: 6. 파일이 없다면 최솟값 템플릿 작성 후 생성</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="ow">exist</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span> <span class="o">(</span>
+    <span class="nb">echo</span> <span class="o">---</span> <span class="o">&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="kd">layout</span>: <span class="kd">post</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="nb">title</span>: <span class="s2">"</span><span class="nv">%TODAY%</span><span class="s2"> </span><span class="nv">%POST_NAME%</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="kd">categories</span>: <span class="o">[</span><span class="nv">%CATEGORY%</span><span class="o">]</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="kd">tags</span>: <span class="o">[</span><span class="nv">%TAG_NAME%</span><span class="o">]</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="o">---</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span>. <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span> # <span class="nv">%POST_NAME%</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+    <span class="nb">echo</span>. <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+<span class="o">)</span>
+
+<span class="c">:: 7. VS Code로 해당 파일 열기 및 터미널 종료</span>
+<span class="kd">code</span> <span class="s2">"</span><span class="nv">%FILE_PATH%</span><span class="s2">"</span>
+<span class="k">exit</span>
+</code></pre></div></div>
+<p>*AI 이용한 명령 프롬프트이다.
+수정할 일이 있다면 직접 수정할 수 있다.</p>
+
+<p>결과</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>파일은 xxxx-xx-xx-(포스팅 주제/ 제목).md으로 열어준다.
+만일, 동일 파일이 있을 경우 그 파일을 열어준다.
+</code></pre></div></div>
+
+<h2 id="문제--윈도우-시작-시-바로-열고-싶다">문제 : 윈도우 시작 시 바로 열고 싶다.</h2>
+
+<h3 id="shellstartup">shell:startup</h3>
+
+<ol>
+  <li><kbd>Ctrl</kbd> + <kbd>R</kbd> 실행창 을 열고</li>
+  <li>shell:startup 입력 후 해당 파일(.bat)을 넣어준다.</li>
+</ol>
+
+<h2 id="마무리">마무리</h2>
+<p>블로그 경로 진입의 단순화를 통해 파일 열기가 쉬워졌다.
+윈도우 시작시에 다른 곳에 한눈 팔지 않고 하루에 한번씩 작성하도록 유도 할 수 있다.
+또한 window 프롬프트를 이용했기 때문에 git add, git commit,git push도 활용할 수 있음을 기대할 수 있다.</p>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="StartProgram" /><summary type="html"><![CDATA[Blog시작을-위한-설정 문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함 블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기]]></summary></entry><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
 
 <p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
 
 <p>[] 단축 스니펫
 [] 기록방법 - 파일 구조(Directory Tree) ㅂ 한자키
-[] 단축키 - 미리보기, 터미널 열기 등등 정리할 것들</p>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
+[] 단축키 - 미리보기, 터미널 열기 등등 정리할 것들
+[] 별칭(Alias) 사용자 설정 - Highlight.js</p>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
 
 <h3 id="문제--이미지-캡처하기">문제 : 이미지 캡처하기</h3>
 <ul>
@@ -141,7 +271,7 @@ images 폴더가 생서되고 image.png가 생성된다.</p>
 결국 브라우저로 보고 싶어서 정리해 보았다.</p>
 
 <h3 id="jektll-서버-작동">jektll 서버 작동</h3>
-<pre><code class="language-cmd">bundle exec jekyll serve
+<pre><code class="language-cmd">bundle exec jekylly serve
 </code></pre>
 
 <h3 id="브라우저에서-보기">브라우저에서 보기</h3>
@@ -171,7 +301,40 @@ git push
 <h3 id="마무리">마무리</h3>
 <ul>
   <li>추후 병합 작업을 하면서 생기는 문제들을 여기에 기록할 계획이다.</li>
-</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">PHP</title><link href="http://localhost:4000/myblog/2026/06/18/php.html" rel="alternate" type="text/html" title="PHP" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/php</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/php.html"><![CDATA[<h3 id="다운로드">다운로드</h3>
+</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">Mysql</title><link href="http://localhost:4000/myblog/2026/06/18/mysql.html" rel="alternate" type="text/html" title="Mysql" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/mysql</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/mysql.html"><![CDATA[<hr />
+<p>layout: post
+title:  “APM 구현 MySql데이터 베이스 추가”
+—</p>
+
+<h3 id="다운로드">다운로드</h3>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql은 검색해보니 많은 버전들이 있었다.
+그중에 가장 최근에 썼던 워크벤치8.0으로 사용하고자 한다.
+</code></pre></div></div>
+
+<p><img src="../assets/images/2026-06-18-mysql/1.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/2.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/3.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/4.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/5.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/6.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/7.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/8.png" alt="alt text" />
+<img src="../assets/images/2026-06-18-mysql/9.png" alt="비밀번호 설정" />
+<img src="../assets/images/2026-06-18-mysql/10.png" alt="무슨 설정?" />
+<img src="../assets/images/2026-06-18-mysql/11.png" alt="이건 또 무슨 설정?" />
+<img src="../assets/images/2026-06-18-mysql/12.png" alt="너도 무슨거야?" />
+<img src="../assets/images/2026-06-18-mysql/13.png" alt="대충 설치였구나" />
+<img src="../assets/images/2026-06-18-mysql/14.png" alt="대충 다와간다." />
+<img src="../assets/images/2026-06-18-mysql/15.png" alt="설치 완료" />
+<img src="../assets/images/2026-06-18-mysql/16.png" alt="들어가 볼까?" /></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>! 이게 뭘까? 
+open windows firewall ports for network access
+
+로컬에서 학습할 예정이고 보안상 안전을 위해 해제해 두웠다.
+추후에 열어두는 방법을 알아보고 포트를 열어 네트워크가 가능하게 만들어보도록 해야겠다.
+
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “APM 구현 MySql데이터 베이스 추가” —]]></summary></entry><entry><title type="html">PHP</title><link href="http://localhost:4000/myblog/2026/06/18/php.html" rel="alternate" type="text/html" title="PHP" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/php</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/php.html"><![CDATA[<h3 id="다운로드">다운로드</h3>
 
 <!-- ![PHP 다운로드](../assets/images/2026-06-18-php/php-1.png) -->
 <p><img src="../assets/images/2026-06-18-php/php-12.png" alt="PHP 다운로드" /></p>
@@ -221,40 +384,7 @@ git push
 <p><img src="../assets/images/2026-06-18-php/php-14.png" alt="alt text" />
 정상적으로 들어가는 모습</p>
 
-<p>출처 : https://wikidocs.net/271931CD</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry><entry><title type="html">Mysql</title><link href="http://localhost:4000/myblog/2026/06/18/mysql.html" rel="alternate" type="text/html" title="Mysql" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/mysql</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/mysql.html"><![CDATA[<hr />
-<p>layout: post
-title:  “APM 구현 MySql데이터 베이스 추가”
-—</p>
-
-<h3 id="다운로드">다운로드</h3>
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql은 검색해보니 많은 버전들이 있었다.
-그중에 가장 최근에 썼던 워크벤치8.0으로 사용하고자 한다.
-</code></pre></div></div>
-
-<p><img src="../assets/images/2026-06-18-mysql/1.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/2.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/3.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/4.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/5.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/6.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/7.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/8.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/9.png" alt="비밀번호 설정" />
-<img src="../assets/images/2026-06-18-mysql/10.png" alt="무슨 설정?" />
-<img src="../assets/images/2026-06-18-mysql/11.png" alt="이건 또 무슨 설정?" />
-<img src="../assets/images/2026-06-18-mysql/12.png" alt="너도 무슨거야?" />
-<img src="../assets/images/2026-06-18-mysql/13.png" alt="대충 설치였구나" />
-<img src="../assets/images/2026-06-18-mysql/14.png" alt="대충 다와간다." />
-<img src="../assets/images/2026-06-18-mysql/15.png" alt="설치 완료" />
-<img src="../assets/images/2026-06-18-mysql/16.png" alt="들어가 볼까?" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>! 이게 뭘까? 
-open windows firewall ports for network access
-
-로컬에서 학습할 예정이고 보안상 안전을 위해 해제해 두웠다.
-추후에 열어두는 방법을 알아보고 포트를 열어 네트워크가 가능하게 만들어보도록 해야겠다.
-
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “APM 구현 MySql데이터 베이스 추가” —]]></summary></entry><entry><title type="html">Check List</title><link href="http://localhost:4000/myblog/2026/06/18/check-list.html" rel="alternate" type="text/html" title="Check List" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/check-list</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/check-list.html"><![CDATA[<hr />
+<p>출처 : https://wikidocs.net/271931CD</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry><entry><title type="html">Check List</title><link href="http://localhost:4000/myblog/2026/06/18/check-list.html" rel="alternate" type="text/html" title="Check List" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/check-list</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/check-list.html"><![CDATA[<hr />
 <p>layout: post
 title: “체크 리스트”
 —</p>
@@ -276,152 +406,4 @@ title: “체크 리스트”
 <p>layout: post
 title: “개발자 기술 블로그 운영 계획 및 고찰”
 category: “Blog”
-—</p>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “개발자 기술 블로그 운영 계획 및 고찰” category: “Blog” —]]></summary></entry><entry><title type="html">아파치 환경 변수 설정</title><link href="http://localhost:4000/myblog/2026/06/16/apache-set-env.html" rel="alternate" type="text/html" title="아파치 환경 변수 설정" /><published>2026-06-16T00:00:00+09:00</published><updated>2026-06-16T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/16/apache-set-env</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/16/apache-set-env.html"><![CDATA[<h3 id="환경-변수-추가">환경 변수 추가</h3>
-
-<p><img src="../assets/images/2026-06-16/set-env.png" alt="환경 변수 설정 들어가기" /></p>
-
-<p>window + R 으로 실행창 에서 systdm.cpl 입력</p>
-
-<p><img src="../assets/images/2026-06-16/set-env-2.png" alt="환경 변수 설정 들어가기" /></p>
-
-<p>고급 &gt; 환경 변수 들어가기</p>
-
-<p><img src="../assets/images/2026-06-16/set-env-3.png" alt="환경 변수 설정 들어가기" /></p>
-
-<p>사용자 변수 Path 편집</p>
-
-<p><img src="../assets/images/2026-06-16/set-env-4.png" alt="환경 변수 설정" /></p>
-
-<p>새로 만들기로 설치한 경로에 맞는 Apache24\bin 추가</p>
-
-<p><img src="../assets/images/2026-06-16/set-env-5.png" alt="환경 변수 설정 확인" /></p>
-
-<p>cmd에 httpd -v 로 버전을 띄어 정상적으로 들어갔는지 확인 할 수 있다.</p>
-
-<h3 id="아파치-서비스-등록">아파치 서비스 등록</h3>
-
-<p><img src="../assets/images/2026-06-16/set-env-6.png" alt="alt text" /></p>
-
-<p>httpd -k install 로 서비스 성공적으로 등록된 모습</p>
-
-<p>에러코드는 추후에 ServerName을 수정하면 된다.</p>
-
-<h3 id="아파치-실행">아파치 실행</h3>
-
-<p>window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -k start</p>
-
-<h3 id="아파치-종료">아파치 종료</h3>
-
-<p>window + R 에서 cmd 를 ctrl shift enter로 진입(관리자 권한) httpd -k stop</p>
-
-<h3 id="아파치-실행-상태-확인">아파치 실행 상태 확인</h3>
-
-<p>window + R 에서
- services.msc
- 입력
- apache 상태 실행이 떠 있는지 확인</p>]]></content><author><name></name></author><summary type="html"><![CDATA[환경 변수 추가]]></summary></entry><entry><title type="html">아파치 서버 작동까지</title><link href="http://localhost:4000/myblog/2026/06/16/apache.html" rel="alternate" type="text/html" title="아파치 서버 작동까지" /><published>2026-06-16T00:00:00+09:00</published><updated>2026-06-16T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/16/apache</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/16/apache.html"><![CDATA[<h3 id="다운로드">다운로드</h3>
-
-<p>윈도우용 아파치 사이트
-https://www.apachelounge.com/download/</p>
-
-<p><img src="../assets/images/2026-06-16/site.png" alt="사이트 다운로드" /></p>
-
-<p><img src="../assets/images/2026-06-16/filePath.png" alt="경로" /></p>
-
-<p>경로는 D:\web 에 저장했습니다.</p>
-
-<h3 id="리슨-서버-설정">리슨 서버 설정</h3>
-
-<p><img src="../assets/images/2026-06-16/set-listen-server.png" alt="설정 경로" /></p>
-
-<p>Apache24\conf 에 있는 httpd.conf 파일을 열어줍니다.</p>
-
-<p><img src="../assets/images/2026-06-16/setListen.png" alt="리슨 서버 확인" /></p>
-
-<p>VS Code를 통해 Listen 단어를 찾고 서버를 실행할 포트를 확인합니다.</p>
-
-<h3 id="웹-서버-실행하기">웹 서버 실행하기</h3>
-
-<p><img src="../assets/images/2026-06-16/run-web-server.png" alt="Run Web Server" /></p>
-
-<h3 id="-실행-실패-cmd-창이-뜨고-사라진다">! 실행 실패 cmd 창이 뜨고 사라진다.</h3>
-<p>왜일까?
-추측. 포트를 누가 쓰고 있나?</p>
-
-<p><img src="../assets/images/2026-06-16/find-listen.png" alt="포트 검색" />
-cmd 에 80을 검색 <br />
-뜨지만 사용 하고 있다면 :80으로 나와야 한다.</p>
-
-<p>에러를 찾기 위해 cmd에서 실행</p>
-
-<p><img src="../assets/images/2026-06-16/find-error-code.png" alt="find-error" />
-httpd.exe: Syntax error on line 33 of D:/Web/Apache24/conf/httpd.conf: ServerRoot must be a valid directory</p>
-
-<p>33줄에서 에러가 뜬다고 나와있다.</p>
-
-<p><img src="../assets/images/2026-06-16/33line-error.png" alt="33줄 에러" />
-SRVROOT는 C:/Apache24 으로 경로가 틀려버린 경우이다.
-보통은 C:/로 저장하는 경우가 많기 때문에 임의로 저장한 경우 수정해 줘야 한다.</p>
-
-<p><img src="../assets/images/2026-06-16/edit-path.png" alt="경로 수정" />
-경로를 수정해 준다</p>
-
-<p><img src="../assets/images/2026-06-16/run-web-server-on.png" alt="돌아 가는 모습" /></p>
-
-<p>cmd 창이 뜨고 서버가 돌아가는 걸 확인 할 수 있다. <br /></p>
-
-<p>이제 웹 브라우저로 http://localhost:80 들어가기</p>
-
-<p><img src="../assets/images/2026-06-16/run-web-server-on-2.png" alt="it works!" /></p>
-
-<p>작동 되는 모습</p>
-
-<h3 id="작동하는-파일-확인하기">작동하는 파일 확인하기</h3>
-
-<p>이제 실행 되는 파일을 알아보자.</p>
-
-<p><img src="../assets/images/2026-06-16/document-root.png" alt="실행 되는 파일 경로" /></p>
-
-<p>DocumentRoot 에서 실행 되고 있는 파일 경로를 볼수 있다.</p>
-
-<p><img src="../assets/images/2026-06-16/run-file-path.png" alt="실행 되는 파일 확인" /></p>
-
-<p><img src="../assets/images/2026-06-16/edit-index-file.png" alt="index 파일 수정" /></p>
-
-<p>약간 수정하여 반응을 살핀다.<br /><br />
-위와 동일하게 http.exe 실행 웹 브라우저로 http://localhost:80 들어가면..</p>
-
-<p><img src="../assets/images/2026-06-16/edit-index-file-2.png" alt="수정 된 모습" /></p>
-
-<p>수정된 모습을 볼 수 있다.<br /></p>
-
-<p>! 처음에는 수정 안된 모습이 보일 수 있지만 새로고침을 한다면 정상적으로 수정된 모습을 볼 수 있다.</p>
-
-<p>그 외에 대표적인 환경설정 변수</p>
-
-<h2 id="대표적인-환경설정-변수">대표적인 환경설정 변수</h2>
-<p>
-Listen: 웹 서버가 수신 대기하는 포트를 지정합니다. 기본적으로 80번 포트를 사용하지만, 보안을 위해 다른 포트로 변경할 수도 있습니다.
-
-ServerRoot: 서버의 루트 디렉토리를 설정합니다. 이 디렉토리는 Apache 관련 파일의 위치를 지정합니다.
-
-DocumentRoot: 웹 서버에서 서비스되는 파일의 기본 디렉토리를 설정합니다. 클라이언트가 접근할 수 있는 파일은 이 디렉토리 아래에 있어야 합니다.
-
-DirectoryIndex: 디렉토리에 접근할 때 사용할 기본 문서를 지정합니다. 예를 들어, "index.html" 또는 "index.php"와 같은 파일이 될 수 있습니다.
-
-ErrorLog: 오류 로그 파일의 경로를 지정합니다. 웹 서버에서 발생하는 오류에 대한 로그는 이 파일에 기록됩니다.
-
-LogLevel: 로그 메시지의 상세도를 지정합니다. 이를 통해 웹 서버의 로그를 얼마나 상세하게 기록할지 결정할 수 있습니다.
-
-ServerName: 가상 호스트를 설정할 때 사용되는 서버의 기본 도메인 이름을 지정합니다.
-
-Directory: 특정 디렉토리에 대한 설정을 지정합니다. 인증, 액세스 제어 및 기타 디렉토리 관련 설정을 포함할 수 있습니다.
-
-VirtualHost: 가상 호스트를 정의하고 해당 호스트에 대한 설정을 지정합니다. 이를 통해 하나의 서버에서 여러 개의 독립적인 웹 사이트를 호스팅할 수 있습니다.
-[출처] 왕초보도 따라하는 윈도우에 아파치(Apache) 웹서버 설치 따라하기|작성자 개발자준생
-</p>
-
-<h3 id="참고-출처">참고 출처</h3>
-
-<p>출처 : https://blog.naver.com/cjs0308cjs/223370079814<br />
-출처 : https://ecolumbus.tistory.com/147</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry></feed>
+—</p>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “개발자 기술 블로그 운영 계획 및 고찰” category: “Blog” —]]></summary></entry></feed>
