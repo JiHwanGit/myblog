@@ -16,7 +16,3 @@ my-project/[최상위 루트 폴더]
 ├ config.php
 └ index.php
 ```
-
-```cmd
-
-```

@@ -1,4 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2026-08-13T02:42:45+09:00</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-13 [APM구현]APM-github에-저장하기</title><link href="http://localhost:4000/myblog/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-13 [APM구현]APM-github에-저장하기" /><published>2026-08-13T00:00:00+09:00</published><updated>2026-08-13T00:00:00+09:00</updated><id>http://localhost:4000/myblog/webdev/2026/08/13/%5BAPM%EA%B5%AC%ED%98%84%5DAPM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="apm구현apm-github에-저장하기">[APM구현]APM-github에-저장하기</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-30T12:03:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</title><link href="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기" /><published>2026-08-15T00:00:00+09:00</published><updated>2026-08-15T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/15/%5BAPM%EA%B5%AC%ED%98%84%5DMySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"><![CDATA[<h1 id="apm구현mysql-데이터-베이스-및-데이터-테이블-만들기">[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</h1>
+
+<p>관련 <a href="https://dev.mysql.com/doc/refman/9.7/en/database-use.html]">공식홈페이지</a>를 참조하여 작성</p>
+
+<p>해당 정리는 캡처 이미지 위주의 workbench 보다 코드블록 위주의 command line로 기록하는게 보기 좋다 생각하여 command line으로 정리하였다.
+단, 추후 복잡한 데이터 관계도의 경우 workbench로 정리하고자 한다.</p>
+
+<h2 id="순서">순서</h2>
+<ol>
+  <li>command line 진입</li>
+  <li>데이터 베이스 생성
+( + 터미널에서 mysql 데이터베이스 까지 접속하기)</li>
+  <li>데이터 테이블 생성</li>
+  <li>기본으로 사용 할 데이터 생성</li>
+</ol>
+
+<h3 id="mysql-command-line">MYSQL Command Line</h3>
+
+<p>첫 화면은 페스워드를 입력해야 한다.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter password:
+</code></pre></div></div>
+
+<p>입력 성공시..</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Welcome</span> <span class="k">to</span> <span class="n">the</span> <span class="n">MySQL</span> <span class="n">monitor</span><span class="p">.</span>  <span class="n">Commands</span> <span class="k">end</span> <span class="k">with</span> <span class="p">;</span> <span class="k">or</span> <span class="err">\</span><span class="k">g</span><span class="p">.</span>
+<span class="n">Your</span> <span class="n">MySQL</span> <span class="k">connection</span> <span class="n">id</span> <span class="k">is</span> <span class="mi">11</span>
+<span class="n">Server</span> <span class="k">version</span><span class="p">:</span> <span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">31</span> <span class="n">MySQL</span> <span class="n">Community</span> <span class="n">Server</span> <span class="o">-</span> <span class="n">GPL</span>
+
+<span class="n">Copyright</span> <span class="p">(</span><span class="k">c</span><span class="p">)</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2022</span><span class="p">,</span> <span class="n">Oracle</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n">its</span> <span class="n">affiliates</span><span class="p">.</span>
+
+<span class="n">Oracle</span> <span class="k">is</span> <span class="n">a</span> <span class="n">registered</span> <span class="n">trademark</span> <span class="k">of</span> <span class="n">Oracle</span> <span class="n">Corporation</span> <span class="k">and</span><span class="o">/</span><span class="k">or</span> <span class="n">its</span>
+<span class="n">affiliates</span><span class="p">.</span> <span class="n">Other</span> <span class="k">names</span> <span class="n">may</span> <span class="n">be</span> <span class="n">trademarks</span> <span class="k">of</span> <span class="n">their</span> <span class="n">respective</span>
+<span class="n">owners</span><span class="p">.</span>
+
+<span class="k">Type</span> <span class="s1">'help;'</span> <span class="k">or</span> <span class="s1">'</span><span class="se">\h</span><span class="s1">'</span> <span class="k">for</span> <span class="n">help</span><span class="p">.</span> <span class="k">Type</span> <span class="s1">'</span><span class="se">\c</span><span class="s1">'</span> <span class="k">to</span> <span class="n">clear</span> <span class="n">the</span> <span class="k">current</span> <span class="k">input</span> <span class="k">statement</span><span class="p">.</span>
+
+<span class="n">mysql</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>데이터 베이스 확인하기</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div></div>
+<p>출력</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+</code></pre></div></div>
+
+<h3 id="2-데이터-베이스-생성">2. 데이터 베이스 생성</h3>
+
+<p>user 데이터 베이스 생성 쿼리</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">sql_1</span><span class="p">;</span>
+</code></pre></div></div>
+<p>확인하기</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sql_1              |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+</code></pre></div></div>
+
+<p>그 외 추가 명령어
+데이터베이스 삭제</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">drop</span> <span class="n">sql_1</span><span class="p">;</span>
+</code></pre></div></div>
+<p>데이터베이스 선택()</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">use</span> <span class="n">sql_1</span><span class="p">;</span>
+</code></pre></div></div>
+<h3 id="-터미널에서-mysql-데이터베이스-까지-접속하기">+ 터미널에서 mysql 데이터베이스 까지 접속하기</h3>
+<p>전역변수 (MySQL\MySQL Server 8.0\bin) 추가했다면</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql</span> <span class="o">-</span><span class="n">h</span> <span class="p">[</span><span class="err">호스트</span><span class="p">]</span> <span class="o">-</span><span class="n">u</span> <span class="p">[</span><span class="err">유저이름</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="err">데이터베이스</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>터미널에서도 접속이 가능하다.</p>
+<pre><code class="language-cmd">mysql -u root -p
+</code></pre>
+
+<h3 id="3-데이터-테이블-생성">3. 데이터 테이블 생성</h3>
+
+<p>테이블 만들기</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">create</span> <span class="k">table</span> <span class="k">user</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> 
+    <span class="n">pw</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> 
+    <span class="n">info</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+<p>테이블 확인</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">show</span> <span class="n">tables</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----------------+
+| Tables_in_sql_1 |
++-----------------+
+| user            |
++-----------------+
+1 row in set (0.00 sec)
+</code></pre></div></div>
+<p>테이블 구조 확인</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DESCRIBE</span> <span class="k">user</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | varchar(20) | YES  |     | NULL    |       |
+| pw    | varchar(20) | YES  |     | NULL    |       |
+| info  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+</code></pre></div></div>
+<p>field type null key Default Extra 나중에 정리하기</p>
+
+<h3 id="기본으로-사용-할-데이터-생성">기본으로 사용 할 데이터 생성</h3>
+
+<p>데이터 추가하기</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">user</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'admin'</span><span class="p">,</span> <span class="s1">'admin1234'</span><span class="p">,</span> <span class="s1">'imadmin'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>데이터 확인하기</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">user</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-------+-----------+---------+
+| id    | pw        | info    |
++-------+-----------+---------+
+| admin | admin1234 | imadmin |
++-------+-----------+---------+
+1 row in set (0.00 sec)
+</code></pre></div></div>
+<h2 id="마무리">마무리</h2>
+<p>추후 정리할게 생겼다.
+일단 간단하게 데이터를 만드는 작업을 하고 APM을 구현할 생각이다.</p>]]></content><author><name></name></author><category term="WebDev" /><category term="mysql" /><category term="DB" /><summary type="html"><![CDATA[[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기]]></summary></entry><entry><title type="html">2026-08-15 gitignore-추가</title><link href="http://localhost:4000/github/2026/08/15/gitignore-%EC%B6%94%EA%B0%80.html" rel="alternate" type="text/html" title="2026-08-15 gitignore-추가" /><published>2026-08-15T00:00:00+09:00</published><updated>2026-08-15T00:00:00+09:00</updated><id>http://localhost:4000/github/2026/08/15/gitignore-%EC%B6%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/github/2026/08/15/gitignore-%EC%B6%94%EA%B0%80.html"><![CDATA[<h1 id="gitignore-추가">gitignore-추가</h1>
+
+<p><a href="https://www.toptal.com/developers/gitignore">프로젝트에 맞는 ignore 찾기</a></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-project/[최상위 루트 폴더]
+├ .git/
+├ .gitignore  &lt;-- 여기에 생성!
+├ config.php
+└ index.php
+</code></pre></div></div>]]></content><author><name></name></author><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[gitignore-추가]]></summary></entry><entry><title type="html">2026-08-15 [APM구현]php에서-mysql-데이터베이스-연결</title><link href="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-php%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%97%B0%EA%B2%B0.html" rel="alternate" type="text/html" title="2026-08-15 [APM구현]php에서-mysql-데이터베이스-연결" /><published>2026-08-15T00:00:00+09:00</published><updated>2026-08-15T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/15/%5BAPM%EA%B5%AC%ED%98%84%5Dphp%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%97%B0%EA%B2%B0</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-php%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%97%B0%EA%B2%B0.html"><![CDATA[<h1 id="apm구현php에서-mysql-데이터베이스-연결">[APM구현]php에서-mysql-데이터베이스-연결</h1>
+
+<p><a href="https://www.php.net/manual/en/book.mysqli.php">공식 홈페이지 참조</a>
+<a href="https://wikidocs.net/271931">숏텀 PHP - PHP 윈도우 실행환경 참고</a></p>
+
+<p>php.ini에서</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">;extension=mysqli
+</span></code></pre></div></div>
+<p>주석 처리 풀기</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">mysqli</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"user_id"</span><span class="p">,</span> <span class="s2">"user_password"</span><span class="p">,</span> <span class="s2">"test"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$conn</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"연결 실패: "</span> <span class="mf">.</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="n">connect_error</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">echo</span> <span class="s2">"연결 성공!"</span><span class="p">;</span>
+</code></pre></div></div>
+<p><span style="color: red">mysqli 값은 보여지면 안됩니다.
+해당 값의 경우 따로 파일을 관리해야하고 git에서 ignore처리 해야합니다.</span>
+추후 처리하는 방법 알아보기</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="nf">query</span><span class="p">(</span><span class="s2">"SELECT id from user"</span><span class="p">);</span>
+<span class="nv">$row</span> <span class="o">=</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="nf">fetch_assoc</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'id'</span><span class="p">];</span>
+</code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin
+</code></pre></div></div>]]></content><author><name></name></author><category term="WebDev" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[[APM구현]php에서-mysql-데이터베이스-연결 공식 홈페이지 참조 숏텀 PHP - PHP 윈도우 실행환경 참고]]></summary></entry><entry><title type="html">2026-08-14 [APM구현]php에서-mysql-데이터-가져오기-정리</title><link href="http://localhost:4000/webdev/2026/08/14/APM%EA%B5%AC%ED%98%84-php%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0-%EC%A0%95%EB%A6%AC.html" rel="alternate" type="text/html" title="2026-08-14 [APM구현]php에서-mysql-데이터-가져오기-정리" /><published>2026-08-14T00:00:00+09:00</published><updated>2026-08-14T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/14/%5BAPM%EA%B5%AC%ED%98%84%5Dphp%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/14/APM%EA%B5%AC%ED%98%84-php%EC%97%90%EC%84%9C-mysql-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0-%EC%A0%95%EB%A6%AC.html"><![CDATA[<h1 id="apm구현php에서-mysql-데이터-가져오기-정리">[APM구현]php에서-mysql-데이터-가져오기-정리</h1>
+
+<h2 id="데이터베이스를-연결하기-위한-순서-정리가-필요하다">데이터베이스를 연결하기 위한 순서 정리가 필요하다.</h2>
+<ol>
+  <li>MySQL-데이터-베이스-및-데이터-테이블-만들기</li>
+  <li>php에서-mysql-데이터베이스-연결</li>
+  <li>틀에 맞게 데이터를 불러오기</li>
+  <li>동적페이지 만들기</li>
+</ol>
+
+<h3 id="mysql데이터-만들기">mysql데이터 만들기</h3>
+<p>만들 데이터 : id, pw, info</p>]]></content><author><name></name></author><category term="WebDev" /><category term="mysql" /><category term="php" /><category term="mysqli" /><category term="freenote" /><summary type="html"><![CDATA[[APM구현]php에서-mysql-데이터-가져오기-정리 데이터베이스를 연결하기 위한 순서 정리가 필요하다. MySQL-데이터-베이스-및-데이터-테이블-만들기 php에서-mysql-데이터베이스-연결 틀에 맞게 데이터를 불러오기 동적페이지 만들기]]></summary></entry><entry><title type="html">2026-08-13 [APM구현]APM-github에-저장하기</title><link href="http://localhost:4000/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-13 [APM구현]APM-github에-저장하기" /><published>2026-08-13T00:00:00+09:00</published><updated>2026-08-13T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/13/%5BAPM%EA%B5%AC%ED%98%84%5DAPM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/13/APM%EA%B5%AC%ED%98%84-APM-github%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="apm구현apm-github에-저장하기">[APM구현]APM-github에-저장하기</h1>
 
 <h3 id="github에-연결될-파일-구분">github에 연결될 파일 구분</h3>
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>─┬apach
@@ -6,14 +196,49 @@
  ├mysql
  └htdocs * git에 연결될 파일
 </code></pre></div></div>
+<p>apach 안에 htdocs 파일을 복사하여 밖으로 빼준다.</p>
 <h3 id="apach경로-재설정">apach경로 재설정</h3>
 <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DocumentRoot</span> <span class="s2">"(htdocs 해당 파일의 부모 절대경로)\htdocs"</span>
 </code></pre></div></div>
-<p>htdocs 해당 파일의 절대 경로를 설정해 줘야한다.
-*주의 DocumentRoot는 절대 경로만 사용할 수 있다.</p>
+<p>htdocs 해당 파일의 절대 경로를 설정해 줘야한다. (밑에 Directory도 설정해주기)</p>
+
+<p><span style="color: red">DocumentRoot는 절대 경로만 사용할 수 있다.</span>
+<span style="color: red">\(역슬래시) 대신 /(슬래시)를 써야한다.</span></p>
+
+<h3 id="확인하기">확인하기</h3>
+<pre><code class="language-cmd">httpd -k start
+</code></pre>
+
+<h3 id="로컬저장소-등록">로컬저장소 등록</h3>
+<p>htdocs 경로 창에 cmd입력</p>
+<pre><code class="language-cmd">git init
+</code></pre>
+
+<h3 id="원격-저장소-등록">원격 저장소 등록</h3>
+<p>github 사이트에서 생성
+설정 - private</p>
+
+<h3 id="로컬-저장소-원격-저장소-연결">로컬 저장소 원격 저장소 연결</h3>
+
+<p><img src="../assets/pngs/2026-08-13-[APM구현]APM-github에-저장하기-1.png" alt="alt text" /></p>
+
+<p>저장소의 https 붙여놓고 연결하기</p>
+<pre><code class="language-cmd">git remote add origin (복사한 https)
+</code></pre>
+<p>확인하기</p>
+<pre><code class="language-cmd">git remote -v
+</code></pre>
+
+<p>로컬 저장소 원격 저장소에 올리기</p>
+<pre><code class="language-cmd">git fetch origin
+git checkout main
+git add .
+git commit -m "첫 페이지"
+git push
+</code></pre>
 
 <h3 id="마무리">마무리</h3>
-<p>브라우저에 보이는 파일(htdocs)들은 다른 컴퓨터로 가져와 바로 사용할 수 있지만 apach의 설정들은 각 컴퓨터마다 설정해야 사용할 수 있다는 걸 깨달았다.</p>]]></content><author><name></name></author><category term="WebDev" /><category term="Apach" /><category term="php" /><category term="mySQL" /><category term="github" /><summary type="html"><![CDATA[[APM구현]APM-github에-저장하기 github에 연결될 파일 구분 ─┬apach ├PHP ├mysql └htdocs * git에 연결될 파일 apach경로 재설정 DocumentRoot "(htdocs 해당 파일의 부모 절대경로)\htdocs" htdocs 해당 파일의 절대 경로를 설정해 줘야한다. *주의 DocumentRoot는 절대 경로만 사용할 수 있다.]]></summary></entry><entry><title type="html">2026-08-11 Blog시작을-위한-설정</title><link href="http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html" rel="alternate" type="text/html" title="2026-08-11 Blog시작을-위한-설정" /><published>2026-08-11T00:00:00+09:00</published><updated>2026-08-11T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html"><![CDATA[<h1 id="blog시작을-위한-설정">Blog시작을-위한-설정</h1>
+<p>브라우저에 보이는 파일(htdocs)들은 다른 컴퓨터로 가져와 바로 사용할 수 있지만 apach의 설정들은 각 컴퓨터마다 설정해야 사용할 수 있다는 걸 깨달았다.</p>]]></content><author><name></name></author><category term="WebDev" /><category term="Apach" /><category term="php" /><category term="mySQL" /><category term="github" /><summary type="html"><![CDATA[[APM구현]APM-github에-저장하기 github에 연결될 파일 구분 ─┬apach ├PHP ├mysql └htdocs * git에 연결될 파일 apach 안에 htdocs 파일을 복사하여 밖으로 빼준다. apach경로 재설정 DocumentRoot "(htdocs 해당 파일의 부모 절대경로)\htdocs" htdocs 해당 파일의 절대 경로를 설정해 줘야한다. (밑에 Directory도 설정해주기)]]></summary></entry><entry><title type="html">2026-08-11 Blog시작을-위한-설정</title><link href="http://localhost:4000/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html" rel="alternate" type="text/html" title="2026-08-11 Blog시작을-위한-설정" /><published>2026-08-11T00:00:00+09:00</published><updated>2026-08-11T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/11/Blog%EC%8B%9C%EC%9E%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%84%A4%EC%A0%95.html"><![CDATA[<h1 id="blog시작을-위한-설정">Blog시작을-위한-설정</h1>
 
 <h2 id="문제--블로그-경로가-복잡하여-작성시-찾는-불편함">문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함</h2>
 <ul>
@@ -127,14 +352,32 @@
 <h2 id="마무리">마무리</h2>
 <p>블로그 경로 진입의 단순화를 통해 파일 열기가 쉬워졌다.
 윈도우 시작시에 다른 곳에 한눈 팔지 않고 하루에 한번씩 작성하도록 유도 할 수 있다.
-또한 window 프롬프트를 이용했기 때문에 git add, git commit,git push도 활용할 수 있음을 기대할 수 있다.</p>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="StartProgram" /><summary type="html"><![CDATA[Blog시작을-위한-설정 문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함 블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기]]></summary></entry><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
+또한 window 프롬프트를 이용했기 때문에 git add, git commit,git push도 활용할 수 있음을 기대할 수 있다.</p>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="StartProgram" /><summary type="html"><![CDATA[Blog시작을-위한-설정 문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함 블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
 
-<p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
+<h2 id="직접-사이트로-올리는-main과-작업하는-공간-분리">직접 사이트로 올리는 main과 작업하는 공간 분리</h2>
+<ul>
+  <li>main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리</li>
+  <li>작업이 끝나고 main에 ji을 병합하여 올리기</li>
+</ul>
 
-<p>[] 단축 스니펫
-[] 기록방법 - 파일 구조(Directory Tree) ㅂ 한자키
-[] 단축키 - 미리보기, 터미널 열기 등등 정리할 것들
-[] 별칭(Alias) 사용자 설정 - Highlight.js</p>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
+<h3 id="작업이-끝나고-커밋과-푸시">작업이 끝나고 커밋과 푸시</h3>
+<pre><code class="language-cmd">git add .
+git commit -m "오늘은 뭐했을까?"
+git push
+</code></pre>
+
+<h3 id="브런지-이동">브런지 이동</h3>
+<pre><code class="language-cmd">git checkout main
+</code></pre>
+
+<h3 id="병합하기">병합하기</h3>
+<pre><code class="language-cmd">git merge ji
+</code></pre>
+
+<h3 id="마무리">마무리</h3>
+<ul>
+  <li>추후 병합 작업을 하면서 생기는 문제들을 여기에 기록할 계획이다.</li>
+</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
 
 <h3 id="문제--이미지-캡처하기">문제 : 이미지 캡처하기</h3>
 <ul>
@@ -264,146 +507,28 @@ images 폴더가 생서되고 image.png가 생성된다.</p>
  │
  └jpg 폴더
         └(현재의마크다운의 이름을 가진 jpg 이미지).jpg
-</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry><entry><title type="html">2026-08-07 사이트-올리기전-미리보기</title><link href="http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 사이트-올리기전-미리보기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html"><![CDATA[<h1 id="사이트-올리기전-미리보기">사이트-올리기전-미리보기</h1>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry><entry><title type="html">2026-08-07 사이트-올리기전-미리보기</title><link href="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 사이트-올리기전-미리보기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html"><![CDATA[<h1 id="사이트-올리기전-미리보기">사이트-올리기전-미리보기</h1>
 
 <h2 id="문제">문제</h2>
 <p>vscode로 미리 볼 수 있는 것에 한계가 있다 생각이 들었다.
 결국 브라우저로 보고 싶어서 정리해 보았다.</p>
 
 <h3 id="jektll-서버-작동">jektll 서버 작동</h3>
-<pre><code class="language-cmd">bundle exec jekylly serve
+<pre><code class="language-cmd">bundle exec jekyll serve
 </code></pre>
 
 <h3 id="브라우저에서-보기">브라우저에서 보기</h3>
 <pre><code class="language-url">http://localhost:4000/
-</code></pre>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[사이트-올리기전-미리보기]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/myblog/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
+</code></pre>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[사이트-올리기전-미리보기]]></summary></entry><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
 
-<h2 id="직접-사이트로-올리는-main과-작업하는-공간-분리">직접 사이트로 올리는 main과 작업하는 공간 분리</h2>
-<ul>
-  <li>main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리</li>
-  <li>작업이 끝나고 main에 ji을 병합하여 올리기</li>
-</ul>
+<p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
 
-<h3 id="작업이-끝나고-커밋과-푸시">작업이 끝나고 커밋과 푸시</h3>
-<pre><code class="language-cmd">git add .
-git commit -m "오늘은 뭐했을까?"
-git push
-</code></pre>
-
-<h3 id="브런지-이동">브런지 이동</h3>
-<pre><code class="language-cmd">git checkout main
-</code></pre>
-
-<h3 id="병합하기">병합하기</h3>
-<pre><code class="language-cmd">git merge ji
-</code></pre>
-
-<h3 id="마무리">마무리</h3>
-<ul>
-  <li>추후 병합 작업을 하면서 생기는 문제들을 여기에 기록할 계획이다.</li>
-</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">Mysql</title><link href="http://localhost:4000/myblog/2026/06/18/mysql.html" rel="alternate" type="text/html" title="Mysql" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/mysql</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/mysql.html"><![CDATA[<hr />
-<p>layout: post
-title:  “APM 구현 MySql데이터 베이스 추가”
-—</p>
-
-<h3 id="다운로드">다운로드</h3>
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql은 검색해보니 많은 버전들이 있었다.
-그중에 가장 최근에 썼던 워크벤치8.0으로 사용하고자 한다.
-</code></pre></div></div>
-
-<p><img src="../assets/images/2026-06-18-mysql/1.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/2.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/3.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/4.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/5.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/6.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/7.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/8.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-mysql/9.png" alt="비밀번호 설정" />
-<img src="../assets/images/2026-06-18-mysql/10.png" alt="무슨 설정?" />
-<img src="../assets/images/2026-06-18-mysql/11.png" alt="이건 또 무슨 설정?" />
-<img src="../assets/images/2026-06-18-mysql/12.png" alt="너도 무슨거야?" />
-<img src="../assets/images/2026-06-18-mysql/13.png" alt="대충 설치였구나" />
-<img src="../assets/images/2026-06-18-mysql/14.png" alt="대충 다와간다." />
-<img src="../assets/images/2026-06-18-mysql/15.png" alt="설치 완료" />
-<img src="../assets/images/2026-06-18-mysql/16.png" alt="들어가 볼까?" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>! 이게 뭘까? 
-open windows firewall ports for network access
-
-로컬에서 학습할 예정이고 보안상 안전을 위해 해제해 두웠다.
-추후에 열어두는 방법을 알아보고 포트를 열어 네트워크가 가능하게 만들어보도록 해야겠다.
-
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “APM 구현 MySql데이터 베이스 추가” —]]></summary></entry><entry><title type="html">PHP</title><link href="http://localhost:4000/myblog/2026/06/18/php.html" rel="alternate" type="text/html" title="PHP" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/php</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/php.html"><![CDATA[<h3 id="다운로드">다운로드</h3>
-
-<!-- ![PHP 다운로드](../assets/images/2026-06-18-php/php-1.png) -->
-<p><img src="../assets/images/2026-06-18-php/php-12.png" alt="PHP 다운로드" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-
-<p><img src="../assets/images/2026-06-18-php/php-2.png" alt="PHP 경로" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-<p><img src="../assets/images/2026-06-18-php/php-3.png" alt="php.int" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-
-<p><img src="../assets/images/2026-06-18-php/php-4.png" alt="alt text" /></p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
-
-<p><img src="../assets/images/2026-06-18-php/php-5.png" alt="alt text" /></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>;extension_dir = "ext" 으로 되어있는 걸 extension_dir = "D:\Web\PHP\ext" 로 수정
-</code></pre></div></div>
-<h3 id="환경변수-설정">환경변수 설정</h3>
-<p><img src="../assets/images/2026-06-18-php/php-6.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-php/php-7.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-php/php-8.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-php/php-9.png" alt="alt text" />
-<img src="../assets/images/2026-06-18-php/php-10.png" alt="alt text" /></p>
-
-<p>### 
-<img src="../assets/images/2026-06-18-php/php-11.png" alt="alt text" /></p>
-
-<p><img src="../assets/images/2026-06-18-php/php-13.png" alt="alt text" /></p>
-
-<p>! php 파일에 “php8apache2_4.dll” 파일이 없으신가요?
-아마 Non Thread Safe 파일을 받으셔서 그렇습니다.
-정상적으로 Thread Safe 받으시면 해결 됩니다.</p>
-
-<p><img src="../assets/images/2026-06-18-php/php-15.png" alt="alt text" />
-파일 만들기 info.php</p>
-
-<p><img src="../assets/images/2026-06-18-php/php-16.png" alt="alt text" />
-간단하게 php 반응 살펴보기</p>
-
-<p><img src="../assets/images/2026-06-18-php/php-14.png" alt="alt text" />
-정상적으로 들어가는 모습</p>
-
-<p>출처 : https://wikidocs.net/271931CD</p>]]></content><author><name></name></author><summary type="html"><![CDATA[다운로드]]></summary></entry><entry><title type="html">Check List</title><link href="http://localhost:4000/myblog/2026/06/18/check-list.html" rel="alternate" type="text/html" title="Check List" /><published>2026-06-18T00:00:00+09:00</published><updated>2026-06-18T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/18/check-list</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/18/check-list.html"><![CDATA[<hr />
-<p>layout: post
-title: “체크 리스트”
-—</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ ] 블로그 관련 글 추가
-[ ] 블로그 - 주로 사용하는 문법 및 내 블로그에 어떻게 적용할 것인가에 대한 정리
-[ ] 블로그 - vs-code 미리보기에 "- [ ]" 적용 안됨
-[ ] 블로그 - 카테고리 추가
-[ ] 블로그 - ruby 언어 추가 및 로컬사이트로 보기
-
-[ ] 웹 - php 설치
-[ ] 웹 - 아파치 php 연동
-[ ] 웹 - APM 구현(로그인)
-
-[ ] 보안 - 로그인 인증/식별 5가지 구현
-
-
-</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “체크 리스트” —]]></summary></entry><entry><title type="html">Blog</title><link href="http://localhost:4000/myblog/2026/06/17/blog.html" rel="alternate" type="text/html" title="Blog" /><published>2026-06-17T00:00:00+09:00</published><updated>2026-06-17T00:00:00+09:00</updated><id>http://localhost:4000/myblog/2026/06/17/blog</id><content type="html" xml:base="http://localhost:4000/myblog/2026/06/17/blog.html"><![CDATA[<hr />
-<p>layout: post
-title: “개발자 기술 블로그 운영 계획 및 고찰”
-category: “Blog”
-—</p>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: post title: “개발자 기술 블로그 운영 계획 및 고찰” category: “Blog” —]]></summary></entry></feed>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축 스니펫</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />기록방법 - 파일 구조(Directory Tree) ㅂ 한자키</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축키 - 미리보기, 터미널 열기 등등 정리할 것들</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />별칭(Alias) 사용자 설정 - Highlight.js</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />field type null key Default Extra 나중에 정리하기 (2026-08-15-[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />내부 마크 다운 페이지 이동하기</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />php mysql 값 관리하기 -&gt;2026-08-15-[APM구현]php에서-mysql-데이터베이스-연결</li>
+</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry></feed>
