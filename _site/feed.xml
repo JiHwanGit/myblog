@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-09-30T12:03:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</title><link href="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기" /><published>2026-08-15T00:00:00+09:00</published><updated>2026-08-15T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/15/%5BAPM%EA%B5%AC%ED%98%84%5DMySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"><![CDATA[<h1 id="apm구현mysql-데이터-베이스-및-데이터-테이블-만들기">[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-10-03T16:55:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</title><link href="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-15 [APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기" /><published>2026-08-15T00:00:00+09:00</published><updated>2026-08-15T00:00:00+09:00</updated><id>http://localhost:4000/webdev/2026/08/15/%5BAPM%EA%B5%AC%ED%98%84%5DMySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/webdev/2026/08/15/APM%EA%B5%AC%ED%98%84-MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0.html"><![CDATA[<h1 id="apm구현mysql-데이터-베이스-및-데이터-테이블-만들기">[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기</h1>
 
 <p>관련 <a href="https://dev.mysql.com/doc/refman/9.7/en/database-use.html]">공식홈페이지</a>를 참조하여 작성</p>
 
@@ -352,7 +352,19 @@ git push
 <h2 id="마무리">마무리</h2>
 <p>블로그 경로 진입의 단순화를 통해 파일 열기가 쉬워졌다.
 윈도우 시작시에 다른 곳에 한눈 팔지 않고 하루에 한번씩 작성하도록 유도 할 수 있다.
-또한 window 프롬프트를 이용했기 때문에 git add, git commit,git push도 활용할 수 있음을 기대할 수 있다.</p>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="StartProgram" /><summary type="html"><![CDATA[Blog시작을-위한-설정 문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함 블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
+또한 window 프롬프트를 이용했기 때문에 git add, git commit,git push도 활용할 수 있음을 기대할 수 있다.</p>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="StartProgram" /><summary type="html"><![CDATA[Blog시작을-위한-설정 문제 : 블로그 경로가 복잡하여 작성시 찾는 불편함 블로그 경로를 찾아가 파일을 만들고 관련 프론트 매터 작성하는 최적화하기]]></summary></entry><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
+
+<p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축 스니펫</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />기록방법 - 파일 구조(Directory Tree) ㅂ 한자키</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축키 - 미리보기, 터미널 열기 등등 정리할 것들</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />별칭(Alias) 사용자 설정 - Highlight.js</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />field type null key Default Extra 나중에 정리하기 (2026-08-15-[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />내부 마크 다운 페이지 이동하기</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />php mysql 값 관리하기 -&gt;2026-08-15-[APM구현]php에서-mysql-데이터베이스-연결</li>
+</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry><entry><title type="html">2026-08-07 git_병합하기</title><link href="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 git_병합하기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/git_%EB%B3%91%ED%95%A9%ED%95%98%EA%B8%B0.html"><![CDATA[<h1 id="git_병합하기">git_병합하기</h1>
 
 <h2 id="직접-사이트로-올리는-main과-작업하는-공간-분리">직접 사이트로 올리는 main과 작업하는 공간 분리</h2>
 <ul>
@@ -377,7 +389,19 @@ git push
 <h3 id="마무리">마무리</h3>
 <ul>
   <li>추후 병합 작업을 하면서 생기는 문제들을 여기에 기록할 계획이다.</li>
-</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
+</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Git" /><summary type="html"><![CDATA[git_병합하기 직접 사이트로 올리는 main과 작업하는 공간 분리 main을 블로그 올리는 공간 ji를 작업하는 공간으로 분리 작업이 끝나고 main에 ji을 병합하여 올리기]]></summary></entry><entry><title type="html">2026-08-07 사이트-올리기전-미리보기</title><link href="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 사이트-올리기전-미리보기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html"><![CDATA[<h1 id="사이트-올리기전-미리보기">사이트-올리기전-미리보기</h1>
+
+<h2 id="문제">문제</h2>
+<p>vscode로 미리 볼 수 있는 것에 한계가 있다 생각이 들었다.
+결국 브라우저로 보고 싶어서 정리해 보았다.</p>
+
+<h3 id="jektll-서버-작동">jektll 서버 작동</h3>
+<pre><code class="language-cmd">bundle exec jekyll serve
+</code></pre>
+
+<h3 id="브라우저에서-보기">브라우저에서 보기</h3>
+<pre><code class="language-url">http://localhost:4000/
+</code></pre>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[사이트-올리기전-미리보기]]></summary></entry><entry><title type="html">2026-08-07 이미지 추가 시 경로 자동화</title><link href="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html" rel="alternate" type="text/html" title="2026-08-07 이미지 추가 시 경로 자동화" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B6%94%EA%B0%80%20%EC%8B%9C%20%EA%B2%BD%EB%A1%9C%20%EC%9E%90%EB%8F%99%ED%99%94</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EA%B0%80-%EC%8B%9C-%EA%B2%BD%EB%A1%9C-%EC%9E%90%EB%8F%99%ED%99%94.html"><![CDATA[<h1 id="이미지-추가-시-경로-자동화">이미지 추가 시 경로 자동화</h1>
 
 <h3 id="문제--이미지-캡처하기">문제 : 이미지 캡처하기</h3>
 <ul>
@@ -507,28 +531,4 @@ images 폴더가 생서되고 image.png가 생성된다.</p>
  │
  └jpg 폴더
         └(현재의마크다운의 이름을 가진 jpg 이미지).jpg
-</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry><entry><title type="html">2026-08-07 사이트-올리기전-미리보기</title><link href="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html" rel="alternate" type="text/html" title="2026-08-07 사이트-올리기전-미리보기" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%98%AC%EB%A6%AC%EA%B8%B0%EC%A0%84-%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0.html"><![CDATA[<h1 id="사이트-올리기전-미리보기">사이트-올리기전-미리보기</h1>
-
-<h2 id="문제">문제</h2>
-<p>vscode로 미리 볼 수 있는 것에 한계가 있다 생각이 들었다.
-결국 브라우저로 보고 싶어서 정리해 보았다.</p>
-
-<h3 id="jektll-서버-작동">jektll 서버 작동</h3>
-<pre><code class="language-cmd">bundle exec jekyll serve
-</code></pre>
-
-<h3 id="브라우저에서-보기">브라우저에서 보기</h3>
-<pre><code class="language-url">http://localhost:4000/
-</code></pre>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[사이트-올리기전-미리보기]]></summary></entry><entry><title type="html">2026-08-07 FreeNote</title><link href="http://localhost:4000/blog/2026/08/07/FreeNote.html" rel="alternate" type="text/html" title="2026-08-07 FreeNote" /><published>2026-08-07T00:00:00+09:00</published><updated>2026-08-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/2026/08/07/FreeNote</id><content type="html" xml:base="http://localhost:4000/blog/2026/08/07/FreeNote.html"><![CDATA[<h1 id="freenote">FreeNote</h1>
-
-<p>자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축 스니펫</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />기록방법 - 파일 구조(Directory Tree) ㅂ 한자키</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />단축키 - 미리보기, 터미널 열기 등등 정리할 것들</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />별칭(Alias) 사용자 설정 - Highlight.js</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />field type null key Default Extra 나중에 정리하기 (2026-08-15-[APM구현]MySQL-데이터-베이스-및-데이터-테이블-만들기)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />내부 마크 다운 페이지 이동하기</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />php mysql 값 관리하기 -&gt;2026-08-15-[APM구현]php에서-mysql-데이터베이스-연결</li>
-</ul>]]></content><author><name></name></author><category term="Blog" /><category term="Note" /><summary type="html"><![CDATA[FreeNote 자유롭게 기록할 것을 체크 리스트를 추가 하기 위해 만듦]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Blog" /><category term="Blog" /><category term="image" /><summary type="html"><![CDATA[이미지 추가 시 경로 자동화]]></summary></entry></feed>

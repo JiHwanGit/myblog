@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hellow to myblog"
+published: false
 ---
 
 이미지 넣기 : 
