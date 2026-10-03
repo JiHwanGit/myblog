@@ -2,8 +2,21 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+
+.bundle/
+vendor/
 
 _site/
 .jekyll-cache/
 .jekyll-metadata
+
+# 3. 개발 서버 실행 시 생성되는 로그 파일
+*.log
+
+# 4. 운영체제(OS) 자동 생성 파일
+.DS_Store
+Thumbs.db
+
+# 5. IDE 및 에디터 설정 폴더
+.vscode/
+.idea/

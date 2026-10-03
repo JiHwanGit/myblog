@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 헤드 추가 -->
+{% include head.html %}
+
+<body>
+    <!--헤더 추가-->
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post">
+                <h1>{{ page.title }}</h1>
+                <p class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</p>
+                <div class="post-content">
+                    {{ content }}
+                </div>
+            </article>
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+
+
+.post-content {
+  white-space: pre-line; /* 엔터 입력대로 줄바꿈 유지, 연속된 공백은 하나로 축소 */
+}

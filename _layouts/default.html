@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 헤드 추가 -->
+{% include head.html %}
+<body>
+    <!--헤더 추가-->
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <div class="home">
+                {% for category in site.categories %}
+                <h2 class="post-list-heading">{{ category[0] }}</h2>
+                <ul class="post-list">
+                    <!-- category[1]은 그 카테고리에 속한 글(post)들의 목록입니다 -->
+                    {% for post in category[1] %}
+                    <li>
+                        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        <h3>
+                            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+                <h2 class="post-list-heading">Posts</h2>
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                    <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        <h3>
+                            <a class="post-link" href="/github/2026/08/15/gitignore-%EC%B6%94%EA%B0%80.html">
+                                {{ post.title }}
+                            </a>
+                        </h3>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+            </div>
+        </div>
+    </main>
+    {% include footer.html %}
+</body>
+</html>

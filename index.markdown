@@ -2,18 +2,5 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: default
 ---
-
-{% for category in site.categories %}
-  <h2>{{ category[0] }}</h2>
-  <ul>
-    {% for post in category[1] %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span>({{ post.date | date: "%Y-%m-%d" }})</span>
-      </li>
-    {% endfor %}
-  </ul>
-{% endfor %}
-
